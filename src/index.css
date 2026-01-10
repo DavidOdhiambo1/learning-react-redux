@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: beige;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+  
+
+.container {
+  background-color: #3f2a2a;
+  color: #fff;
+  width: 50%;
+  margin:auto;
+  border: 5px red solid;
+  padding:20px;
+  text-align: center;
+}
+.button {
+  background-color: bisque;
+  border-radius: 12px;
+}
+
+.button:hover {
+  color: red;
+
 }
