@@ -1,14 +1,30 @@
 import React from 'react';
+import { orderPizza } from './redux/pizza/PizzaActions';
+import {connect} from 'react-redux';
 
 
 
-function PizzaBox() {
+function PizzaBox(props) {
+    console.log(props);
   return (
     <div className='container'>
-      <h1>Number of pizzabase = 100</h1>
-      <button className='button'>Order Pizza</button>
+      <h1>Number of pizzabase = {props.pizzaBase}</h1>
+      <button className='button' onClick={props.orderPizza}>Order Pizza</button>
     </div>
   )
 }
 
-export default PizzaBox
+  const mapStateToProps =(state)=>{
+    return {
+        pizzaBase:state.pizzaBase
+    }
+  }
+
+  const mapDispatchToProps = (dispatch)=>{
+    return {
+        orderPizza:()=>dispatch(orderPizza())
+    }
+  }
+
+
+export default connect (mapStateToProps,mapDispatchToProps)(PizzaBox)
