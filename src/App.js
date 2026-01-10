@@ -1,9 +1,13 @@
 
 import './App.css';
+import PizzaBox from './components/PizzaBox';
 
 function App() {
   return (
-    <h1>Learning React + Redux</h1>
+    <div>
+      <h1>Learning React + Redux</h1>
+      <PizzaBox/>
+    </div>
   );
 }
 
