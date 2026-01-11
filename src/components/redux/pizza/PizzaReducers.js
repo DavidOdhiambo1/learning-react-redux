@@ -1,11 +1,11 @@
-import { orderPizza } from "./PizzaActions";
+
 import { ORDER_PIZZA } from "./PizzaTypes";
 
 const initialState={
     pizzaBase:500
 }
 
-function reducer(state=initialState, action){
+function pizzaReducer(state=initialState, action){
     switch(action.type){
         case ORDER_PIZZA:
             return {
@@ -16,4 +16,4 @@ function reducer(state=initialState, action){
     }
 }
 
-export default reducer
+export default pizzaReducer
