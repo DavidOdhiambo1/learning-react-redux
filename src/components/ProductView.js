@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import { fetchProducts } from './redux/product/ProductActions'
 
 function ProductView({productsData, fetchProducts}) {
-    
+    console.log(productsData);
 
     useEffect(()=>{
+
         fetchProducts()
     }, [] )
   return (
@@ -19,7 +20,7 @@ function ProductView({productsData, fetchProducts}) {
 
 const mapStateToProps = (state) =>{
     return {
-        productsData : state.product
+        productsData : state
 
     }
 }
