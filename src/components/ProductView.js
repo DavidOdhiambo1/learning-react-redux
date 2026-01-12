@@ -3,16 +3,16 @@ import { connect } from 'react-redux'
 import { fetchProducts } from './redux/product/ProductActions'
 
 function ProductView({productsData, fetchProducts}) {
-    console.log(productsData)
+    
 
-    useEffect(
-        ()=>{fetchProducts()}, []
-    )
+    useEffect(()=>{
+        fetchProducts()
+    }, [] )
   return (
     <div>
       {productsData.loading && <p>Loading...</p>}
       {productsData.error && <p>{productsData.error}</p>}
-      {productsData.products && <p>{productsData.products.map(title=><p>{title}</p>)}</p>}
+      {productsData.products && <div>{productsData.products.map(product=><p >{product}</p>)}</div>}
     </div>
   )
 }
